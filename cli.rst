@@ -13,9 +13,13 @@
   - [ ] less-major companies
   - [ ] ncurses interactive interface (?)
 
-- [ ] `lolcat <https://github.com/busyloop/lolcat>`_ port/clone
+- [-] `lolcat <https://github.com/busyloop/lolcat>`_ `port/clone <https://github.com/yabok/yalc>`_
 
-  - [ ] C || Rust || Lua
+  - [ ] Argument parsing
+
+    - [ ] Option to affect the background color instead of the foreground
+    - [ ] Option to specify a file to read from instead of always using stdin
+    - [ ] Optios to tune colorization
 
 - [ ] `spark <https://github.com/holman/spark>`_ clone
 
