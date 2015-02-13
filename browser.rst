@@ -1,6 +1,8 @@
  Browsers
 ==========
 
+Possibility of a background page/resource caching dæmon? (might be really cool, might be completel impractical)
+
 - [ ] Ncurses
 
   - [ ] ``<div>`` and minimal CSS layouts
