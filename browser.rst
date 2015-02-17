@@ -1,7 +1,15 @@
  Browsers
 ==========
 
-Possibility of a background page/resource caching dæmon? (might be really cool, might be completel impractical)
+- [ ] Daemon (?)
+
+  - [ ] Fetch pages with ``libcurl``/similar into a cache
+  - [ ] Walk a cached page to create a data structure of page resources (?)
+
+This is an interesting idea; it separates the online part of the internet from browsing.
+This makes security much simpler to accomplish (this almost feels like a slightly more automated version of the `RMS browsing method <http://lwn.net/Articles/262570/>`_).
+It also separates the components of a browser into the page fetcher and the renderer (possibility to support multiple front-ends easily).
+However, this could easily mean the downfall of some common functionality without extra work (e.g., logging into a website).
 
 - [ ] Ncurses
 
