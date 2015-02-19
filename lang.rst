@@ -20,7 +20,7 @@
 
     - [ ] Remove all implicit casting and promotion
 
-      - [ ] Exception: functions taking arguments of the fancy pseudo-generics can be called with a valid primitive type.
+      - [ ] Exception: functions taking arguments of the fancy pseudo-generics can be called with any matching primitive type.
 
     - [ ] Remove implicit array-to-pointer decay
 
@@ -37,3 +37,4 @@
 
   - [ ] Array declarations should have the brackets next to the type; e.g., ``u64[] identifier``
   - [ ] Multi-dimensional VLAs (matrix math programmers, rejoice!)
+  - [ ] Replace ``switch`` with something like a Haskellian ``match``.
