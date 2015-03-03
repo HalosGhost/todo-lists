@@ -43,4 +43,6 @@
 
   - [ ] Array declarations should have the brackets next to the type; e.g., ``u64[] identifier``
   - [ ] Multi-dimensional VLAs (matrix math programmers, rejoice!)
-  - [ ] Replace ``switch`` with something like a Haskellian ``match``.
+  - [ ] Replace ``switch`` with something like a Haskellian ``match``
+  - [ ] Tentative compiler name: ``boil``.
+  - [ ] Tentative simple build system: ``bake`` :P
