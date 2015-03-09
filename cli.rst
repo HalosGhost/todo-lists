@@ -30,3 +30,9 @@
 - [ ] `textbelt <http://textbelt.com/>`_ clone
 
   - [ ] Haskell
+
+- [ ] pulseaudio visualizer
+
+  - [ ] C
+  - [ ] ncurses
+  - [ ] multiple patterns (including equalizer)
