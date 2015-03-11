@@ -7,6 +7,9 @@
   - [ ] Completely reworked type system
 
     - [ ] integral types           -- ``{u,s}{8,16,32,64,128}``
+
+      - [ ] arbitrary-radix literals (e.g., ``2#1111 == 8#17 == 16#f``)
+
     - [ ] arbitrary-width integers -- ``bigint``
     - [ ] real types               -- ``r{8,16,32,64,128}``
 
