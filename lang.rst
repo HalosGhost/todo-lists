@@ -6,30 +6,39 @@
   - [ ] C base; probably llvm
   - [ ] Completely reworked type system
 
-    - [ ] integral types           -- ``{u,s}{8,16,32,64,128}``
+    - [ ] integral types          -- ``{u,s}{8,16,32,64,128}``
 
+      - [ ] arbitrary bit-width? (since LLVM IR offers it)
       - [ ] arbitrary-radix literals (e.g., ``2#1111 == 8#17 == 16#f``)
 
-    - [ ] arbitrary-width integers -- ``bigint``
-    - [ ] real types               -- ``r{8,16,32,64,128}``
+    - [ ] flexible-width integers -- ``bigint``
+    - [ ] real types              -- ``r{8,16,32,64,128}``
 
-      - [ ] IEEE 754 or binary real; both?
+      - [ ] IEEE 754:2008 in all likelihood since LLVM IR doesn't expose binary reals
+      - [ ] LLVM doesn't expose quarter-precision reals either so that'd either be manual or it wouldn't happen
 
     - [ ] arbitrary-precision real -- ``bigreal``
     - [ ] unicode char             -- ``char``
 
-      - [ ] will need to decide how to handle the representation
+      - [ ] will need to decide how to handle the representation (I'm thinking UCS-6 actually…)
+
+    - [ ] bitmask type or bitwise assignment or bitwise literals
+
+      - [ ] essentially, some way of assigning a variable's bits directly rather than using multiple bitwise operators or hoping integer literals correctly translate to the bitmask you want
 
     - [ ] Haskellian class-like / Rustian trait-like pseudo-generics
 
       - [ ] probably implemented through some form of fancy unions
+
+        - [ ] LLVM IR doesn't expose a union type, so this might be rough
+
       - [ ] ``{u,s}int`` -- accepts any fixed-width integral type of the specified signage
       - [ ] ``real``     -- accepts any fixed-width real type
       - [ ] ``numeric``  -- accepts any fixed-width numeric type
 
     - [ ] Remove all implicit casting and promotion
 
-      - [ ] Exception: functions taking arguments of the fancy pseudo-generics can be called with any matching primitive type.
+      - [ ] Exception: functions taking arguments of the fancy pseudo-generics must be callable with any matching primitive type.
 
     - [ ] Remove implicit array-to-pointer decay
 
