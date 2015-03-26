@@ -11,6 +11,11 @@
       - [ ] arbitrary bit-width? (since LLVM IR offers it)
       - [ ] arbitrary-radix literals (e.g., ``2#1111 == 8#17 == 16#f``)
 
+        - [ ] Could implement ``NULL`` as simple sugar for ``0#``
+
+          - [ ] All primitive types (and their fancy pseudo-generics) will be non-nullable by-default
+          - [ ] A ``nullable`` qualifier to allow for ``NULL`` (i.e., ``b#`` where ``b`` is some unsigned integer) to be valid
+
     - [ ] flexible-width integers -- ``bigint``
     - [ ] real types              -- ``r{8,16,32,64,128}``
 
@@ -21,6 +26,11 @@
     - [ ] unicode char             -- ``char``
 
       - [ ] will need to decide how to handle the representation (I'm thinking UCS-6 actually…)
+
+    - [ ] boolean types            -- ``bool``
+
+      - [ ] might just be implemented as a 1-bit wide integer (``i1`` in LLVM IR)
+      - [ ] implication of {,un}signed booleans?
 
     - [ ] bitmask type or bitwise assignment or bitwise literals
 
