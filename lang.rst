@@ -32,7 +32,7 @@
       - [ ] might just be implemented as a 1-bit wide integer (``i1`` in LLVM IR)
       - [ ] implication of {,un}signed booleans?
 
-    - [ ] bitmask type or bitwise assignment or bitwise literals
+    - [ ] bitmask type or bitwise assignment operator or bitwise literals
 
       - [ ] essentially, some way of assigning a variable's bits directly rather than using multiple bitwise operators or hoping integer literals correctly translate to the bitmask you want
 
@@ -56,15 +56,20 @@
       - [ ] Note: Arrays as arguments are still passed by-reference, this just makes a slightly more clear separation between pointers and arrays
 
   - [ ] Formalize ``{}`` into lexical scoping operators (think of this as Rustian lifetimes)
+  - [ ] ``===`` operator (think ``+=`` but with ``==`` instead of ``+``)
+  - [ ] Visibility qualifiers / namespaces?
   - [ ] Function Literals
 
     - [ ] Implements simple anonymous function support
     - [ ] Implements closures
-    - [ ] Implements much simpler methods for class/instance-model OOP-esque programming
+    - [ ] Implements much simpler methods for class/instance-model OOP-esque programming (though that is definitely not a priority)
     - [ ] Syntax something like: ``type (* id) (type) = @(name) { /* function body */ };``
 
   - [ ] Array declarations should have the brackets next to the type; e.g., ``u64[] identifier``
   - [ ] Multi-dimensional VLAs (matrix math programmers, rejoice!)
-  - [ ] Replace ``switch`` with something like a Haskellian ``match``
+  - [ ] Replace ``switch`` with something like a Haskellian ``match`` (offer them both?)
+
+    - [ ] an operator for ``switch`` or ``match`` expressions
+
   - [ ] Tentative compiler name: ``boil``.
   - [ ] Tentative simple build system: ``bake`` :P
