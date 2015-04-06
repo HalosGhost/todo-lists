@@ -32,7 +32,7 @@
       - [ ] might just be implemented as a 1-bit wide integer (``i1`` in LLVM IR)
       - [ ] implication of {,un}signed booleans?
 
-    - [ ] bitmask type or bitwise assignment operator or bitwise literals
+    - [ ] bitmask type or bitwise assignment operator or bitwise literals (I believe I have settled on using a bitwise assignment operator since it allows the most versatility)
 
       - [ ] essentially, some way of assigning a variable's bits directly rather than using multiple bitwise operators or hoping integer literals correctly translate to the bitmask you want
 
