@@ -19,7 +19,7 @@
 
     - [X] Option to affect the background color instead of the foreground
     - [X] Option to specify a file to read from instead of always using stdin
-    - [ ] Optios to tune colorization
+    - [ ] Options to tune colorization
 
 - [ ] `spark <https://github.com/holman/spark>`_ clone
 
