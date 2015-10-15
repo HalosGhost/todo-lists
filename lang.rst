@@ -73,3 +73,12 @@
 
   - [ ] Tentative compiler name: ``boil``.
   - [ ] Tentative simple build system: ``bake`` :P
+
+- [ ] ``ABL`` (short for "A Bagel Language")
+
+  - [ ] A mix of Haskell and APL (built on LLVM)
+
+    - [ ] Type System and Functional paradigm from Haskell
+    - [ ] Incredible succinctness and leveraging of unicode from APL
+
+  - [ ] Arbitrary Unicode symbols allowed for new function names
