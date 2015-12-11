@@ -1,28 +1,33 @@
  Browsers
 ==========
 
-- [ ] Daemon (?)
+There are a couple of wonderful things about this system.
+First of all, each piece integrates with the pieces below it, but there's very little (if any at all) interaction from a lower level to a higher one.
+This means that, since they are planned to be shared libraries or other public APIs, you can swap out many pieces as you'd like.
+Second, this incredible separation allows us to manage some pretty cool functionality, (e.g., a more automated version of the `RMS browsing method <http://lwn.net/Articles/262570/>`_).
 
-  - [ ] Fetch pages with ``libcurl``/similar into a cache
-  - [ ] Walk a cached page to create a data structure of page resources (?)
+- [ ] Fetcher
 
-This is an interesting idea; it separates the online part of the internet from browsing.
-This makes security much simpler to accomplish (this almost feels like a slightly more automated version of the `RMS browsing method <http://lwn.net/Articles/262570/>`_).
-It also separates the components of a browser into the page fetcher and the renderer (possibility to support multiple front-ends easily).
-However, this could easily mean the downfall of some common functionality without extra work (e.g., logging into a website).
+  - libcurl layer to grab a page and read it into memory
 
-- [ ] Brick
+- [ ] Cacher
 
-  - [ ] ``<div>`` and minimal CSS layouts
-  - [ ] CSS colors (and maybe a few CSS3 transitions)
-  - [ ] enough JS to allow logins to prominent websites
-  - [ ] basic security features (DNT, noscript, &c.)
-  - [ ] allow extensibility through Lua (probably Haskell, actually)
-  - [ ] allow framebuffer display of images (via libsixel? Make it an extension?)
+  - database table that stores the URL, the time cached and some serialized data
 
-- [ ] Graphical
+- [ ] Crawler and Mounter
 
-  - [ ] Wayland
-  - [ ] vim-like modal browsing
-  - [ ] basic security features (DNT, noscript, adblocking, &c.)
-  - [ ] dwb-like control over widget visibility
+  - library to crawl a webpage to create a relatively simple sitemap (which is likely part of the serialized data to be cached)
+  - layer over a FUSE filesystem to opaquely represent the webpage's structure
+
+- [ ] Pager / Renderer
+
+  - Correctly handle basic ``<div>`` layouting
+  - CSS (colors, animations?, basic layouting)
+  - JS (enough to allow basic logins)
+  - basic security features (DNT, noscript, &c.)
+  - sixel?
+
+- [ ] Daemon and CLI client
+
+  - Daemon will be sitting waiting to fetch pages on-request from a client
+  - Client will offer control over each piece of the structure
